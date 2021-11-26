@@ -1,0 +1,54 @@
+.banner {
+    height: 200px;
+}
+
+.banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile {
+    margin-top: 10px;
+    display: flex;
+}
+
+.profile_img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ddd;
+}
+
+.profile_img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.profile_info {
+    margin-left: 10px;
+}
+
+.profile_info .profile_name {
+    color: #1a1a1a;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 100%;
+}
+
+.profile_info .profile_attr {
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.profile_info .profile_attr ul {
+}
+
+.profile_info .profile_attr ul li {
+}
+
+.profile_info .profile_attr ul li span {
+}

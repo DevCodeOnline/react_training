@@ -12,7 +12,7 @@ const App = (props) => {
     return (
         <div className="App">
             <Header/>
-            <Sidebar state={props.state.sidebar}/>
+            <Sidebar store={props.store}/>
             <div className="content">
                 <Route path='/dialogs' render={() => <DialogsContainer store={props.store}/>}/>
                 <Route path='/profile' render={() => <Profile store={props.store} /> }/>

@@ -4,8 +4,8 @@ import {NavLink} from "react-router-dom";
 
 const Sidebar = (props) => {
 
-	let links =  props.sidebar.menu.map(d => <li><NavLink to={d.to}>{d.text}</NavLink></li>);
-	let friends = props.sidebar.friends.map(d => <li><a href="#"><img src={d.img} /><p>{d.name}</p></a></li>);
+	let links =  props.sidebar.menu.map(d => <li key={d.id}><NavLink to={d.to}>{d.text}</NavLink></li>);
+	let friends = props.sidebar.friends.map(d => <li key={d.id}><a href="#"><img src={d.img}/><p>{d.name}</p></a></li>);
 
 	return (
 		<div className={s.sidebar}>

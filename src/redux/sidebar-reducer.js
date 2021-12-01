@@ -1,15 +1,15 @@
 let initialState = {
     menu: [
-        {to: '/profile', text: 'Profile'},
-        {to: '/dialogs', text: 'Messages'},
-        {to: '/news', text: 'News'},
-        {to: '/music', text: 'Music'},
-        {to: '/setting', text: 'Setting'},
+        {id: 1, to: '/profile', text: 'Profile'},
+        {id: 2, to: '/dialogs', text: 'Messages'},
+        {id: 3, to: '/news', text: 'News'},
+        {id: 4, to: '/music', text: 'Music'},
+        {id: 5, to: '/setting', text: 'Setting'},
     ],
     friends: [
-        {img: 'https://www.taskerfinder.com/wp-content/uploads/2020/04/boy1-1536x1536.png', name: 'Andrew'},
-        {img: 'https://www.taskerfinder.com/wp-content/uploads/2020/04/boy1-1536x1536.png', name: 'Sasha'},
-        {img: 'https://www.taskerfinder.com/wp-content/uploads/2020/04/boy1-1536x1536.png', name: 'Sveta'},
+        {id: 1, img: 'https://www.taskerfinder.com/wp-content/uploads/2020/04/boy1-1536x1536.png', name: 'Andrew'},
+        {id: 2, img: 'https://www.taskerfinder.com/wp-content/uploads/2020/04/boy1-1536x1536.png', name: 'Sasha'},
+        {id: 3, img: 'https://www.taskerfinder.com/wp-content/uploads/2020/04/boy1-1536x1536.png', name: 'Sveta'},
     ]
 };
 

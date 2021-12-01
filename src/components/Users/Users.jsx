@@ -5,11 +5,14 @@ import userPhoto from "../../assets/images/boy.png";
 
 const Users = (props) => {
 
-    if (props.users.length === 0) {
-        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-            props.setUsers(response.data.items);
-        })
+    let getUsers = () => {
+        if (props.users.length === 0) {
+            axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+                props.setUsers(response.data.items);
+            })
+        }
     }
+
 
     let list = props.users.map(u => {
         return (
@@ -41,6 +44,7 @@ const Users = (props) => {
             <ul>
                 {list}
             </ul>
+            <button onClick={getUsers} className={s.btn_show}>Show users</button>
         </div>
     )
 };

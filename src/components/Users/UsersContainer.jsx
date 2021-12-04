@@ -1,8 +1,9 @@
-import React from "react";
-import {connect} from "react-redux";
-import {followAC, setCurrentPageAC, setTotalUsersCountAC, setUsersAC, unfollowAC} from "../../redux/users-reducer";
-import * as axios from "axios";
-import Users from "./Users";
+import React from 'react';
+import {connect} from 'react-redux';
+import {followAC, setCurrentPageAC, setTotalUsersCountAC, setUsersAC, unfollowAC} from '../../redux/users-reducer';
+import * as axios from 'axios';
+import Users from './Users';
+import preloader from '../../assets/images/spinner.svg';
 
 class UsersContainer extends React.Component {
 
@@ -22,15 +23,18 @@ class UsersContainer extends React.Component {
 
     render() {
 
-        return <Users
-            totalUserCount={this.props.totalUserCount}
-            pageSize={this.props.pageSize}
-            users={this.props.users}
-            currentPage={this.props.currentPage}
-            onPageChange={this.onPageChange}
-            follow={this.props.follow}
-            unfollow={this.props.unfollow}
-        />
+        return <>
+            { this.props.isFetching ? <img src={preloader} /> : null }
+            <Users
+                totalUserCount={this.props.totalUserCount}
+                pageSize={this.props.pageSize}
+                users={this.props.users}
+                currentPage={this.props.currentPage}
+                onPageChange={this.onPageChange}
+                follow={this.props.follow}
+                unfollow={this.props.unfollow}
+            />
+        </>;
     }
 }
 
@@ -39,7 +43,8 @@ let mapStateToProps = (state) => {
         users: state.userPage.users,
         pageSize: state.userPage.pageSize,
         totalUserCount: state.userPage.totalUserCount,
-        currentPage: state.userPage.currentPage
+        currentPage: state.userPage.currentPage,
+        isFetching: state.userPage.isFetching
     }
 };
 

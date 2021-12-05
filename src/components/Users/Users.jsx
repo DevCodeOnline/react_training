@@ -4,17 +4,7 @@ import userPhoto from "../../assets/images/boy.png";
 
 let Users = (props) => {
 
-    let pageCount = Math.ceil(props.totalUserCount / props.pageSize);
-    let pages = [];
 
-    for (let i = 1; i <= pageCount; i++) {
-        if (i <= 4) {
-            pages.push(i)
-        } else if (i > 4 && i === pageCount) {
-            pages.push(i)
-        }
-
-    }
 
     return <div>
         <div>
